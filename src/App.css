@@ -90,7 +90,7 @@ body {
 }
 
 .navbar-toggler {
-  border-color: #000000;
+  border-color: #ffffff;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -98,3 +98,7 @@ body {
 .navbar-toggler:focus {
   box-shadow: none; /* Remove focus box shadow */
 }
+  .navbar-toggler-icon {
+    background-color: #ffffff67; /* Change the color to black */
+    border-radius: 0.2rem;
+  }
