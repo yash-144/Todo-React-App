@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -46,12 +47,13 @@ function App() {
   };
 
   return (
-    <>
-      <Router>
+    <Router>
+      <div className="custom-scrollbar">
         <Header />
         <Routes>
           <Route
-            exact path="/Todo-React-App"
+            exact
+            path="/Todo-React-App"
             element={
               <>
                 <AddTodo AddTodo={addTodo} />
@@ -62,8 +64,8 @@ function App() {
           <Route exact path="/Todo-React-App/about" element={<About />} />
         </Routes>
         <Footer />
-      </Router>
-    </>
+      </div>
+    </Router>
   );
 }
 

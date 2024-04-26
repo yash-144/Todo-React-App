@@ -1,35 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 15s linear;
-  }
-}
- 
 body {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
+  background-color: rgb(33, 32, 32);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Applies to all elements of Navbar */
+.navbar {
+  /* Header bg color */
+  transition: background-color 0.1s ease-in-out;
+}
+
+/* Navbar links */
+.navbar .navbar-nav > li .nav-link {
+  padding-left: 20px;
   color: white;
 }
-
-
-.App-link {
-  color: #61dafb;
+.navbar-brand {
+  margin-left: 80px;
+  margin-right: 40px;
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
+  user-select: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar-Brand Glitch Fixed */
+.navbar-brand:hover {
+  color: white; /* Keeps the color as it is */
+}.navbar-brand:focus {
+  color: white; /* Keep the color consistent when focused */
+}
+
+.custom-scrollbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto; /* Use auto instead of scroll */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.theme-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 65px; /* Adjust width */
+  height: auto; /* Keep height shorter than width to create an ellipse */
+  transition: transform 0.1s ease-in-out;
+  display: flex;
+  user-select: none;
+}
+
+.theme-switch img {
+  width: 100%;
+  height: auto; /* Let the height adjust automatically */
+  border-radius: 50%; /* Adjust border-radius to create an ellipse */
+}
+
+/* Dark mode */
+.light-mode {  
+  background-color: rgba(216, 29, 29, 0.664);
+  color: rgb(255, 255, 255);
+  transition: background-color 0.1s ease-in-out;
+}
+/* Light Mode */
+.dark-mode {
+  transition: background-color 0.1s ease-in-out;
+}
+
+/* Dark mode navbar links */
+.navbar.dark-mode .navbar-nav > li .nav-link {
+  color: rgb(253, 249, 249);
+}
+/* Dark mode navbar brand */
+.navbar.dark-mode .navbar-brand {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-toggler {
+  border-color: #000000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.navbar-toggler:focus {
+  box-shadow: none; /* Remove focus box shadow */
 }

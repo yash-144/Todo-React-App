@@ -4,7 +4,7 @@ const footer = () => {
   let footerstyle = {
     position: "relative",
     width: "100%",
-    top: "35vh"
+    top: "70vh"
   }
   return (
     <div className='bg-dark text-light py-3' style={footerstyle}>
