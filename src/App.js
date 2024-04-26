@@ -51,7 +51,7 @@ function App() {
         <Header />
         <Routes>
           <Route
-            exact path="/"
+            exact path="/Todo-React-App"
             element={
               <>
                 <AddTodo AddTodo={addTodo} />
@@ -59,7 +59,7 @@ function App() {
               </>
             }
           />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/Todo-React-App/about" element={<About />} />
         </Routes>
         <Footer />
       </Router>
